@@ -50,10 +50,10 @@ def change_map(matrix, start_a, start_b, finish_a, finish_b, current_player):
         matrix[finish_a][finish_b] = current_player["color"]
         matrix[start_a][start_b] = 1
     elif row_diff == 2 and col_diff == 2:
-        opponent_color = 9 - current_player["color"]  # если твой цвет 4 -> чужой 5, и наоборот
+        opponent_color = 9 - current_player["color"]  
         if matrix[mid_a][mid_b] != opponent_color:
             return False
-        matrix[mid_a][mid_b] = 1          # клетка посередине освобождается (была тёмной, тёмной и остаётся)
+        matrix[mid_a][mid_b] = 1          
         matrix[finish_a][finish_b] = current_player["color"]
         matrix[start_a][start_b] = 1
         current_player["score"] += 1
